@@ -6,62 +6,35 @@ using System.Net.Sockets;
 using System.Net;
 using System.Threading;
 using System;
+using InControl;
 
 public class TelloManager : SingletonMonoBehaviour<TelloManager> {
 
 	private static bool isLoaded = false;
 
 	private TelloVideoTexture telloVideoTexture;
+	private PlayerActions playerActions;
+	private InputDevice inputDevice;
 
-	// FlipType is used for the various flips supported by the Tello.
-	public enum FlipType
+	public enum FlipType  // FlipType is used for the various flips supported by the Tello.
 	{
-		// FlipFront flips forward.
-		FlipFront = 0,
-
-		// FlipLeft flips left.
-		FlipLeft = 1,
-
-		// FlipBack flips backwards.
-		FlipBack = 2,
-
-		// FlipRight flips to the right.
-		FlipRight = 3,
-
-		// FlipForwardLeft flips forwards and to the left.
-		FlipForwardLeft = 4,
-
-		// FlipBackLeft flips backwards and to the left.
-		FlipBackLeft = 5,
-
-		// FlipBackRight flips backwards and to the right.
-		FlipBackRight = 6,
-
-		// FlipForwardRight flips forewards and to the right.
-		FlipForwardRight = 7,
+		FlipFront = 0, // FlipFront flips forward.
+		FlipLeft = 1, // FlipLeft flips left.
+		FlipBack = 2, // FlipBack flips backwards.
+		FlipRight = 3, // FlipRight flips to the right.
+		FlipForwardLeft = 4, // FlipForwardLeft flips forwards and to the left.
+		FlipBackLeft = 5, // FlipBackLeft flips backwards and to the left.
+		FlipBackRight = 6, // FlipBackRight flips backwards and to the right.
+		FlipForwardRight = 7, // FlipForwardRight flips forewards and to the right.
 	};
-
-	// VideoBitRate is used to set the bit rate for the streaming video returned by the Tello.
-	public enum VideoBitRate
+	public enum VideoBitRate // VideoBitRate is used to set the bit rate for the streaming video returned by the Tello.
 	{
-		// VideoBitRateAuto sets the bitrate for streaming video to auto-adjust.
-		VideoBitRateAuto = 0,
-
-		// VideoBitRate1M sets the bitrate for streaming video to 1 Mb/s.
-		VideoBitRate1M = 1,
-
-		// VideoBitRate15M sets the bitrate for streaming video to 1.5 Mb/s
-		VideoBitRate15M = 2,
-
-		// VideoBitRate2M sets the bitrate for streaming video to 2 Mb/s.
-		VideoBitRate2M = 3,
-
-		// VideoBitRate3M sets the bitrate for streaming video to 3 Mb/s.
-		VideoBitRate3M = 4,
-
-		// VideoBitRate4M sets the bitrate for streaming video to 4 Mb/s.
-		VideoBitRate4M = 5,
-
+		VideoBitRateAuto = 0, // VideoBitRateAuto sets the bitrate for streaming video to auto-adjust.
+		VideoBitRate1M = 1, // VideoBitRate1M sets the bitrate for streaming video to 1 Mb/s.
+		VideoBitRate15M = 2, // VideoBitRate15M sets the bitrate for streaming video to 1.5 Mb/s
+		VideoBitRate2M = 3, // VideoBitRate2M sets the bitrate for streaming video to 2 Mb/s.
+		VideoBitRate3M = 4, // VideoBitRate3M sets the bitrate for streaming video to 3 Mb/s.
+		VideoBitRate4M = 5, // VideoBitRate4M sets the bitrate for streaming video to 4 Mb/s.
 	};
 
 	override protected void Awake()
@@ -79,9 +52,11 @@ public class TelloManager : SingletonMonoBehaviour<TelloManager> {
 		QualitySettings.vSyncCount = 0;  // VSync must be disabled
 		Application.targetFrameRate = 15;
 
+
+		playerActions = PlayerActions.CreateWithDefaultBindings();
+
 		if (telloVideoTexture == null)
 			telloVideoTexture = FindObjectOfType<TelloVideoTexture>();
-
 	}
 
 	private void OnEnable()
@@ -105,43 +80,27 @@ public class TelloManager : SingletonMonoBehaviour<TelloManager> {
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.T)) {
+
+		inputDevice = InputManager.ActiveDevice;
+
+		float leftX = inputDevice.LeftStick.X;
+		float leftY = inputDevice.LeftStick.Y;
+		float rightX = inputDevice.RightStick.X;
+		float rightY = inputDevice.RightStick.Y;
+
+		if (playerActions.takeoff.WasPressed)
+		{
 			Tello.takeOff();
-		} else if (Input.GetKeyDown(KeyCode.L)) {
+			Debug.Log("takeoff");
+		}
+		else if(playerActions.land.WasPressed)
+		{
 			Tello.land();
+			Debug.Log("land");
 		}
 
-		float lx = 0f;
-		float ly = 0f;
-		float rx = 0f;
-		float ry = 0f;
-
-		if (Input.GetKey(KeyCode.UpArrow)) {
-			ry = 1;
-		}
-		if (Input.GetKey(KeyCode.DownArrow)) {
-			ry = -1;
-		}
-		if (Input.GetKey(KeyCode.RightArrow)) {
-			rx = 1;
-		}
-		if (Input.GetKey(KeyCode.LeftArrow)) {
-			rx = -1;
-		}
-		if (Input.GetKey(KeyCode.W)) {
-			ly = 1;
-		}
-		if (Input.GetKey(KeyCode.S)) {
-			ly = -1;
-		}
-		if (Input.GetKey(KeyCode.D)) {
-			lx = 1;
-		}
-		if (Input.GetKey(KeyCode.A)) {
-			lx = -1;
-		}
-
-		Tello.controllerState.setAxis(lx, ly, rx, ry);
+		//Debug.Log(String.Format("leftX: {0} ,leftY: {1} , rightX: {2} ,rightY: {3} ", leftX, leftY, rightX, rightY));
+		Tello.controllerState.setAxis(leftX, leftY, rightX, rightY);
 	}
 
 	private void Tello_onUpdate(int cmdId)

@@ -70,6 +70,7 @@ public class TelloVideoTexture : MonoBehaviour
 	private void CreateTextureAndPassToPlugin()
 	{
 		texture = new Texture2D(Width, Height, TextureFormat.RGBA32, false);
+
 		texture.filterMode = FilterMode.Point;
 		texture.Apply();
 
