@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="TelloVideoDecoder.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="GLEW\glew.c">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderAPI.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderingPlugin.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderAPI_D3D11.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderAPI_OpenGLCoreES_BACKUP.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderAPI_OpenGLCoreES.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="gl3w\gl3w.c">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderAPI_OpenGLCoreES_UpdatedPlugin.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Unity\IUnityGraphics.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Unity\IUnityGraphicsD3D11.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Unity\IUnityGraphicsD3D12.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Unity\IUnityGraphicsD3D9.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Unity\IUnityGraphicsMetal.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Unity\IUnityInterface.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderAPI.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="PlatformBase.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="GLEW\glew.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="GLEW\glxew.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="GLEW\wglew.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavcodec\ac3_parser.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavcodec\adts_parser.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavcodec\avcodec.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavcodec\avdct.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavcodec\avfft.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavcodec\d3d11va.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavcodec\dirac.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavcodec\dv_profile.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavcodec\dxva2.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavcodec\jni.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavcodec\mediacodec.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavcodec\qsv.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavcodec\vaapi.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavcodec\vdpau.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavcodec\version.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavcodec\videotoolbox.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavcodec\vorbis_parser.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavcodec\xvmc.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavdevice\avdevice.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavdevice\version.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavfilter\avfilter.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavfilter\buffersink.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavfilter\buffersrc.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavfilter\version.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavformat\avformat.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavformat\avio.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavformat\version.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\adler32.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\aes.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\aes_ctr.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\attributes.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\audio_fifo.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\avassert.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\avconfig.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\avstring.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\avutil.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\base64.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\blowfish.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\bprint.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\bswap.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\buffer.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\camellia.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\cast5.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\channel_layout.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\common.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\cpu.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\crc.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\des.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\dict.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\display.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\downmix_info.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\encryption_info.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\error.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\eval.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\ffversion.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\fifo.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\file.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\frame.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\hash.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\hmac.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\hwcontext.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\hwcontext_cuda.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\hwcontext_d3d11va.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\hwcontext_drm.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\hwcontext_dxva2.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\hwcontext_mediacodec.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\hwcontext_qsv.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\hwcontext_vaapi.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\hwcontext_vdpau.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\hwcontext_videotoolbox.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\imgutils.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\intfloat.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\intreadwrite.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\lfg.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\log.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\lzo.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\macros.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\mastering_display_metadata.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\mathematics.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\md5.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\mem.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\motion_vector.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\murmur3.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\opt.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\parseutils.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\pixdesc.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\pixelutils.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\pixfmt.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\random_seed.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\rational.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\rc4.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\replaygain.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\ripemd.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\samplefmt.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\sha.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\sha512.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\spherical.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\stereo3d.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\tea.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\threadmessage.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\time.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\timecode.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\timestamp.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\tree.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\twofish.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\version.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libavutil\xtea.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libpostproc\postprocess.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libpostproc\version.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libswresample\swresample.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libswresample\version.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libswscale\swscale.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\libswscale\version.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\x264.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg-android-prebuilt\include\x264_config.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderAPI_OpenGLCoreES.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="gl3w\gl3w.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="gl3w\glcorearb.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TelloVideoDecoder.def">
+      <Filter>ソース ファイル</Filter>
+    </None>
+    <None Include="Info.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="ffmpeg-android-prebuilt\lib\libavcodec.a" />
+    <Library Include="ffmpeg-android-prebuilt\lib\libavdevice.a" />
+    <Library Include="ffmpeg-android-prebuilt\lib\libavfilter.a" />
+    <Library Include="ffmpeg-android-prebuilt\lib\libavutil.a" />
+    <Library Include="ffmpeg-android-prebuilt\lib\libpostproc.a" />
+    <Library Include="ffmpeg-android-prebuilt\lib\libswscale.a" />
+    <Library Include="ffmpeg-android-prebuilt\lib\libx264.a" />
+    <Library Include="ffmpeg-android-prebuilt\lib\libswresample.a" />
+    <Library Include="ffmpeg-android-prebuilt\lib\libavformat.a" />
+  </ItemGroup>
+</Project>
