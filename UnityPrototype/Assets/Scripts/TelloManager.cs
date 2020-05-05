@@ -15,6 +15,7 @@ public class TelloManager : SingletonMonoBehaviour<TelloManager> {
 	private TelloVideoTexture telloVideoTexture;
 	private PlayerActions playerActions;
 	private InputDevice inputDevice;
+	private GatlingGun gatlingGun;
 
 	public enum FlipType  // FlipType is used for the various flips supported by the Tello.
 	{
@@ -50,8 +51,9 @@ public class TelloManager : SingletonMonoBehaviour<TelloManager> {
 		Tello.onVideoData += Tello_onVideoData;
 
 		QualitySettings.vSyncCount = 0;  // VSync must be disabled
-		Application.targetFrameRate = 15;
+		Application.targetFrameRate = 20;
 
+		gatlingGun = GameObject.Find("GatlingGun").gameObject.GetComponent<GatlingGun>(); ;
 
 		playerActions = PlayerActions.CreateWithDefaultBindings();
 
@@ -98,9 +100,18 @@ public class TelloManager : SingletonMonoBehaviour<TelloManager> {
 			Tello.land();
 			Debug.Log("land");
 		}
+		else if (playerActions.fire.IsPressed)
+		{
+			gatlingGun.Fire();
+			Debug.Log("fire");
+		}
+
+
+		
+
 
 		//Debug.Log(String.Format("leftX: {0} ,leftY: {1} , rightX: {2} ,rightY: {3} ", leftX, leftY, rightX, rightY));
-		Tello.controllerState.setAxis(leftX, leftY, rightX, rightY);
+		Tello.controllerState.setAxis(rightX, leftY, leftX, rightY);
 	}
 
 	private void Tello_onUpdate(int cmdId)

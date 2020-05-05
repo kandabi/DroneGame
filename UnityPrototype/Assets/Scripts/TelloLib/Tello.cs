@@ -970,7 +970,6 @@ namespace TelloLib
             public int droneBatteryLeft;
             public int droneFlyTimeLeft;
 
-
             public int cameraState;//
             public int electricalMachineryState;
             public bool factoryMode;

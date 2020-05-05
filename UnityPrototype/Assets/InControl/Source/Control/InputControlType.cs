@@ -13,6 +13,7 @@ namespace InControl
 		None = 0,
 
 		// Standardized controls.
+		//
 		LeftStickUp = 1,
 		LeftStickDown,
 		LeftStickLeft,
