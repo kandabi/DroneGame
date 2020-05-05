@@ -10,7 +10,7 @@ public class GatlingGun : MonoBehaviour
     Transform go_target;
 
     // Gameobjects need to control rotation and aiming
-    public Transform go_baseRotation;
+    //public Transform go_baseRotation;
     public Transform go_GunBody;
     public Transform go_barrel;
 
