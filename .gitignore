@@ -1,10 +1,10 @@
-/UnityPrototype/[Ll]ibrary/
-/UnityPrototype/[Tt]emp/
-/UnityPrototype/[Oo]bj/
-/UnityPrototype/[Bb]uild/
-/UnityPrototype/[Bb]uilds/
-/UnityPrototype/Assets/AssetStoreTools*
-/UnityPrototype/output
+/UnityProject/[Ll]ibrary/
+/UnityProject/[Tt]emp/
+/UnityProject/[Oo]bj/
+/UnityProject/[Bb]uild/
+/UnityProject/[Bb]uilds/
+/UnityProject/Assets/AssetStoreTools*
+/UnityProject/output
 .vs/
 /VideoDecoderPlugin/bin/
 

@@ -23,8 +23,6 @@ extern "C"
 	void TelloVideoDecoder_PutVideoData(TelloVideoDecoderContext* ctx, void* data, int size);
 }
 
-void Log(const std::string& text);
-
 // --------------------------------------------------------------------------
 // SetTextureFromUnity, an example function we export which is called by one of the scripts.
 
@@ -37,7 +35,8 @@ extern "C" void UNITY_INTERFACE_EXPORT UNITY_INTERFACE_API SetTextureFromUnity(v
 	// A script calls this at initialization time; just remember the texture pointer here.
 	// Will update texture pixels each frame from the plugin rendering event (texture update
 	// needs to happen on the rendering thread).
-	Log("SetTextureFromUnity");
+	//Log("SetTextureFromUnity");
+	//debug_log("SetTextureFromUnity");
 
 	g_TextureHandle = textureHandle;
 	g_TextureWidth = w;
@@ -63,7 +62,7 @@ extern "C" void	UNITY_INTERFACE_EXPORT UNITY_INTERFACE_API UnityPluginLoad(IUnit
 
 	// Run OnGraphicsDeviceEvent(initialize) manually on plugin load
 	OnGraphicsDeviceEvent(kUnityGfxDeviceEventInitialize);
-	Log("UnityPluginLoad");
+	//Log("UnityPluginLoad");
 }
 
 extern "C" void UNITY_INTERFACE_EXPORT UNITY_INTERFACE_API UnityPluginUnload()
@@ -73,7 +72,7 @@ extern "C" void UNITY_INTERFACE_EXPORT UNITY_INTERFACE_API UnityPluginUnload()
 
 extern "C" void UNITY_INTERFACE_EXPORT UNITY_INTERFACE_API UnityPluginEnable()
 {
-	Log("UnityPluginEnable");
+	//Log("UnityPluginEnable");
 	s_TelloContext = TelloVideoDecoder_Open();
 }
 
@@ -100,12 +99,16 @@ static void UNITY_INTERFACE_API OnGraphicsDeviceEvent(UnityGfxDeviceEventType ev
 		assert(s_CurrentAPI == NULL);
 		s_DeviceType = s_Graphics->GetRenderer();
 		s_CurrentAPI = CreateRenderAPI(s_DeviceType);
-		Log("OnGraphicsDeviceEvent, s_DeviceType: " + std::to_string(s_DeviceType));
+		//std::string str = "OnGraphicsDeviceEvent, s_DeviceType: " + std::to_string(s_DeviceType);
+		//debug_log(str.c_str());
 	}
 
 	// Let the implementation process the device related events
 	if (s_CurrentAPI) 
 	{
+		std::string str = "ProcessDeviceEvent";
+		debug_log(str.c_str());
+
 		s_CurrentAPI->ProcessDeviceEvent(eventType, s_UnityInterfaces);
 	}
 
@@ -120,31 +123,37 @@ static void UNITY_INTERFACE_API OnGraphicsDeviceEvent(UnityGfxDeviceEventType ev
 
 static void ModifyTexturePixels()
 {
+	//debug_log("ModifyTexturePixels Function");
+
+
 	void* textureHandle = g_TextureHandle;
 	int width = g_TextureWidth;
 	int height = g_TextureHeight;
 	if (!textureHandle)
 		return;
 
+	//debug_log("textureHandle Is NOT NULL");
+
 	int textureRowPitch;
 	void* textureDataPtr = s_CurrentAPI->BeginModifyTexture(textureHandle, width, height, &textureRowPitch);
 	if (!textureDataPtr)
 		return;
 
-	//Log("BeginModifyTexture");
+	//debug_log("BeginModifyTexture");
 
 	TelloVideoDecoder_ModifyTexturePixels(s_TelloContext, (unsigned char*)textureDataPtr, width, height, textureRowPitch);
-
 	s_CurrentAPI->EndModifyTexture(textureHandle, width, height, textureRowPitch, textureDataPtr);
 }
 
 static void UNITY_INTERFACE_API OnRenderEvent(int eventID)
 {
 	// Unknown / unsupported graphics device type? Do nothing
-	if (s_CurrentAPI == NULL)
+	if (s_CurrentAPI == NULL) 
+	{
+		debug_log("OnRenderEvent Api device is undefined");
 		return;
+	}
 
-	//Log("OnRenderEvent");
 	ModifyTexturePixels();
 }
 

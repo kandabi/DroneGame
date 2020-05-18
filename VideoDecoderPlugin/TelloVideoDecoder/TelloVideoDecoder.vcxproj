@@ -116,7 +116,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>E:\Program Files\ffmpeg\bin\lib;E:\Program Files\ffmpeg\libx264\lib\x64;$(ProjectDir)ffmpeg-android-prebuilt\lib;$(ProjectDir)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>E:\ffmpeg\bin\lib;E:\ffmpeg\libx264\lib\x64;$(ProjectDir)ffmpeg-android-prebuilt\lib;$(ProjectDir)</AdditionalLibraryDirectories>
       <AdditionalDependencies>opengl32.lib;avcodec.lib;avformat.lib;avutil.lib;swscale.lib;libx264.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>TelloVideoDecoder.def</ModuleDefinitionFile>
     </Link>
@@ -159,7 +159,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>E:\Program Files\ffmpeg\bin\lib;E:\Program Files\ffmpeg\libx264\lib\x64;$(ProjectDir)ffmpeg-android-prebuilt\lib;$(ProjectDir)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>E:\ffmpeg\bin\lib;E:\ffmpeg\libx264\lib\x64;$(ProjectDir)ffmpeg-android-prebuilt\lib;$(ProjectDir)</AdditionalLibraryDirectories>
       <AdditionalDependencies>opengl32.lib;avcodec.lib;avformat.lib;avutil.lib;swscale.lib;libx264.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>TelloVideoDecoder.def</ModuleDefinitionFile>
     </Link>
@@ -171,8 +171,6 @@
     <ClCompile Include="RenderAPI.cpp" />
     <ClCompile Include="RenderAPI_D3D11.cpp" />
     <ClCompile Include="RenderAPI_OpenGLCoreES.cpp" />
-    <ClCompile Include="RenderAPI_OpenGLCoreES_UpdatedPlugin.cpp" />
-    <ClCompile Include="RenderAPI_OpenGLCoreES_BACKUP.cpp" />
     <ClCompile Include="RenderingPlugin.cpp" />
     <ClCompile Include="TelloVideoDecoder.cpp" />
   </ItemGroup>
@@ -306,10 +304,6 @@
     <ClInclude Include="Unity\IUnityGraphicsD3D9.h" />
     <ClInclude Include="Unity\IUnityGraphicsMetal.h" />
     <ClInclude Include="Unity\IUnityInterface.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Info.plist" />
-    <None Include="TelloVideoDecoder.def" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="ffmpeg-android-prebuilt\lib\libavcodec.a" />

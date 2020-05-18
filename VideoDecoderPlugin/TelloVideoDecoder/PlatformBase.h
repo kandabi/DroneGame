@@ -29,9 +29,11 @@
 // Which graphics device APIs we possibly support?
 #if UNITY_WIN
 	//#define SUPPORT_D3D11 1 // comment this out if you don't have D3D11 header/library files
-
 	#define SUPPORT_OPENGL_UNIFIED 1
 	#define SUPPORT_OPENGL_CORE 1
+#elif UNITY_ANDROID
+	#define SUPPORT_OPENGL_UNIFIED 1
+	#define SUPPORT_OPENGL_ES 1
 #endif
 
 

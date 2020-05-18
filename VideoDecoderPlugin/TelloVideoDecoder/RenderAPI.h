@@ -55,6 +55,6 @@ public:
 // Create a graphics API implementation instance for the given API type.
 RenderAPI* CreateRenderAPI(UnityGfxRenderer apiType);
 
-//Simple Log
-void Log(const std::string& text);
+void LogToFile(const std::string& text);
+void debug_log(const char* msg);
 

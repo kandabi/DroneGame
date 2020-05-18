@@ -33,16 +33,10 @@
     <ClCompile Include="RenderAPI_D3D11.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="RenderAPI_OpenGLCoreES_BACKUP.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="RenderAPI_OpenGLCoreES.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="gl3w\gl3w.c">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="RenderAPI_OpenGLCoreES_UpdatedPlugin.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
@@ -434,12 +428,6 @@
     <ClInclude Include="gl3w\glcorearb.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="TelloVideoDecoder.def">
-      <Filter>ソース ファイル</Filter>
-    </None>
-    <None Include="Info.plist" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="ffmpeg-android-prebuilt\lib\libavcodec.a" />

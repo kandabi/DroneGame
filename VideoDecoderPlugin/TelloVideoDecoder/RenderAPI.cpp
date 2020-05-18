@@ -2,6 +2,10 @@
 #include "PlatformBase.h"
 #include "Unity/IUnityGraphics.h"
 
+#if defined(UNITY_ANDROID)
+	#include <android/log.h>
+#endif
+
 
 RenderAPI* CreateRenderAPI(UnityGfxRenderer apiType)
 {
@@ -25,7 +29,23 @@ RenderAPI* CreateRenderAPI(UnityGfxRenderer apiType)
 	return NULL;
 }
 
-void Log(const std::string& text)
+
+void debug_log(const char* msg)
+{
+#if defined(UNITY_WIN)
+	LogToFile(msg);
+#elif defined (UNITY_ANDROID)
+	// #if !defined(NDEBUG)
+		__android_log_print(ANDROID_LOG_VERBOSE, "TelloVideoDecoder.cpp", "%s\n", msg);
+	// #endif
+#else
+	#if !defined(NDEBUG)
+		std::cout << msg << std::endl;
+	#endif
+#endif
+}
+
+void LogToFile(const std::string& text)
 {
 	std::ofstream log_file("log_file.txt", std::ios_base::out | std::ios_base::app);
 	log_file << text << std::endl;
