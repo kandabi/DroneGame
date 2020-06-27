@@ -40,9 +40,8 @@ UNITY_DECLARE_INTERFACE(IUnityGraphics)
 	void (UNITY_INTERFACE_API * RegisterDeviceEventCallback)(IUnityGraphicsDeviceEventCallback callback);
 	void (UNITY_INTERFACE_API * UnregisterDeviceEventCallback)(IUnityGraphicsDeviceEventCallback callback);
 };
+
 UNITY_REGISTER_INTERFACE_GUID(0x7CBA0A9CA4DDB544ULL,0x8C5AD4926EB17B11ULL,IUnityGraphics)
-
-
 
 // Certain Unity APIs (GL.IssuePluginEvent, CommandBuffer.IssuePluginEvent) can callback into native plugins.
 // Provide them with an address to a function of this signature.

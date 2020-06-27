@@ -167,7 +167,6 @@
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="gl3w\gl3w.c" />
-    <ClCompile Include="GLEW\glew.c" />
     <ClCompile Include="RenderAPI.cpp" />
     <ClCompile Include="RenderAPI_D3D11.cpp" />
     <ClCompile Include="RenderAPI_OpenGLCoreES.cpp" />
@@ -292,9 +291,6 @@
     <ClInclude Include="ffmpeg-android-prebuilt\include\x264_config.h" />
     <ClInclude Include="gl3w\gl3w.h" />
     <ClInclude Include="gl3w\glcorearb.h" />
-    <ClInclude Include="GLEW\glew.h" />
-    <ClInclude Include="GLEW\glxew.h" />
-    <ClInclude Include="GLEW\wglew.h" />
     <ClInclude Include="PlatformBase.h" />
     <ClInclude Include="RenderAPI.h" />
     <ClInclude Include="RenderAPI_OpenGLCoreES.h" />
